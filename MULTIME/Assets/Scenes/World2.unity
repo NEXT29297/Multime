@@ -248,6 +248,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 271822418}
     m_Modifications:
+    - target: {fileID: 4523543323171970468, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4523543323171970473, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
       propertyPath: m_Name
       value: Space
@@ -310,6 +314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 271822418}
     m_Modifications:
+    - target: {fileID: 4523543323171970468, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4523543323171970473, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
       propertyPath: m_Name
       value: Space (2)
@@ -490,6 +498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 271822418}
     m_Modifications:
+    - target: {fileID: 4523543323171970468, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4523543323171970473, guid: 89de0b63bf87719478e008102c6ac03d, type: 3}
       propertyPath: m_Name
       value: Space (1)
