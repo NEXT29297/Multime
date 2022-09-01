@@ -2443,6 +2443,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1228250474733490304, guid: e40356c442e540048a1227d808d68426, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228250474733490307, guid: e40356c442e540048a1227d808d68426, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1228250474733490311, guid: e40356c442e540048a1227d808d68426, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2486,6 +2494,10 @@ PrefabInstance:
     - target: {fileID: 1228250474733490311, guid: e40356c442e540048a1227d808d68426, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720744960453983424, guid: e40356c442e540048a1227d808d68426, type: 3}
+      propertyPath: Speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2720744960453983424, guid: e40356c442e540048a1227d808d68426, type: 3}
       propertyPath: TextHI
