@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveBackground : MonoBehaviour
-{
+{   
     public Rigidbody2D RB;
     public BoxCollider2D Collider;
 
