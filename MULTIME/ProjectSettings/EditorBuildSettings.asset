@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d2316c9c8c6d56e45a2b4aa33c516db0
   - enabled: 1
-    path: Assets/Scenes/World2.unity
+    path: Assets/Scenes/Space.unity
     guid: f5f633de8dc2eb841ad4de3ab9b94e09
   - enabled: 1
     path: Assets/Scenes/InSpaceship.unity

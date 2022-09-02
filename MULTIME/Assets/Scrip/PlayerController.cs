@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public float Speed = 3;
-    Rigidbody2D rigid2D;
     public Transform BodyTransform;
+    Rigidbody2D rigid2D;
     Animator PlayerAnimatorController;
-    private bool triggerActive = false;
-    public Text TextHI;
+    public float Speed = 2;
     public float time = 5;
+    private bool triggerActive = false;
     private bool Countdown = false;
+    public Text TextHI;
+
     void Start()
     {
         rigid2D = GetComponent<Rigidbody2D>();
@@ -81,3 +82,4 @@ public class PlayerController : MonoBehaviour
     }
 }
 
+//what next?
