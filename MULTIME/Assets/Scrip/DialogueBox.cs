@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
 public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
@@ -12,6 +13,7 @@ public class DialogueBox : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
+        
         StartDialog();
     }
 
@@ -33,6 +35,7 @@ public class DialogueBox : MonoBehaviour
     void StartDialog()
     {
         index = 0;
+        
         StartCoroutine(TypeLine());
     }
 
