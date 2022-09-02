@@ -12,11 +12,13 @@ public class PlayerController1 : MonoBehaviour
     bool isjump = false;
     Animator PlayerAnimatorController;
     public Transform BodyTransform;
+    public DialogueBox dialogue;
     void Start()
     {
         collider2d = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         PlayerAnimatorController = GetComponent<Animator>();
+        dialogue = GetComponent<DialogueBox>();
     }
     void Update()
     {
@@ -34,9 +36,10 @@ public class PlayerController1 : MonoBehaviour
         }
         
         if (Input.GetButtonDown("Jump") && isjump == false)
-        {   
-            jumping();
+        {
             PlayerAnimatorController.SetBool("isJumping", true);
+            jumping();
+            
         }
         
     }
