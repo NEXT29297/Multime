@@ -9,11 +9,10 @@ public class DialogueBox : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
-    public int index;
+    private int index;
     void Start()
     {
         textComponent.text = string.Empty;
-        
         StartDialog();
     }
 
@@ -31,18 +30,21 @@ public class DialogueBox : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+        
+
     }
     void StartDialog()
     {
-        index = 0;
         
+        index = 0;
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
+        
         foreach (var c in lines[index].ToCharArray())
-        {
+        {   
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
