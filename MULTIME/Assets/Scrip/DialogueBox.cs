@@ -51,7 +51,7 @@ public class DialogueBox : MonoBehaviour
     }
     void NextLine()
     {
-        if(index <lines.Length-1)
+        if(index <lines.Length-2)
         {
             index++;
             textComponent.text = string.Empty;

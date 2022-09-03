@@ -6,23 +6,28 @@ public class PlayerController1 : MonoBehaviour
 {
     Collider2D collider2d;
     Rigidbody2D rb;
+
     float horizontalmove = 0f;
-    public float speed = 350f;
+    public float speed = 350f;  
     public float jump = 7f;
     bool isjump = false;
     Animator PlayerAnimatorController;
     public Transform BodyTransform;
-    
+
+    public bool letgo = true;
+
     void Start()
     {
         collider2d = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         PlayerAnimatorController = GetComponent<Animator>();
-       
+        
     }
     void Update()
     {
+
         horizontalmove = Input.GetAxisRaw("Horizontal");           
+
         rb.velocity = new Vector2(horizontalmove*speed*Time.deltaTime, rb.velocity.y);
 
         if(horizontalmove != 0f)
@@ -41,7 +46,7 @@ public class PlayerController1 : MonoBehaviour
             jumping();
             
         }
-        
+ 
     }
     void jumping()
     {
@@ -61,4 +66,11 @@ public class PlayerController1 : MonoBehaviour
         isjump = true;   
     }
     
+    public void canMove(bool move)
+    {
+        if (move == false)
+        {
+            letgo = false;
+        }
+    }
 }

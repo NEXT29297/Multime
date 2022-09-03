@@ -7,25 +7,26 @@ public class MyDialog : MonoBehaviour
 {
     public GameObject dialogBox;
     public bool playerInRange = false;
-    //public MyDialog2 dialog;
     [TextArea(3,10)]
     public string[] sentenses;
     public int index;
     public Text textComponent;
     public float textSpeed;
+
+
     void Start()
     {
         textComponent.text = string.Empty;
         dialogBox.SetActive(false);
-
+        StartDialog();
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && playerInRange ==true)
         {
-            dialogBox.SetActive(true);
             if (textComponent.text == sentenses[index])
             {
+                dialogBox.SetActive(true);
                 NextLine();
             }
             else
@@ -46,16 +47,8 @@ public class MyDialog : MonoBehaviour
     {
         playerInRange = false;
     }
-    void StartDialog()
-    {
-
-        index = 0;
-        StartCoroutine(TypeLine());
-    }
-
     IEnumerator TypeLine()
     {
-
         foreach (var c in sentenses[index].ToCharArray())
         {
             textComponent.text += c;
@@ -64,7 +57,7 @@ public class MyDialog : MonoBehaviour
     }
     void NextLine()
     {
-        if (index < sentenses.Length - 1)
+        if (index < sentenses.Length-1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -73,7 +66,13 @@ public class MyDialog : MonoBehaviour
         else
         {
             dialogBox.SetActive(false);
-
+            index = 0;
         }
     }
+    void StartDialog()
+    {
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+
 }
