@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940846485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099999905, y: 0.765, z: -10}
+  m_LocalPosition: {x: -0.099999905, y: 1.3, z: -10}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.050980393, g: 0.3254902, b: 0.007843138, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -97,8 +97,9 @@ GameObject:
   - component: {fileID: 1228250474733490309}
   - component: {fileID: 1228250474733490306}
   - component: {fileID: 1228250474733490307}
+  - component: {fileID: 18570996}
   m_Layer: 0
-  m_Name: Player_0
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 1228250474733490304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.69, y: -1.42, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1940846488}
@@ -229,3 +230,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.67}
   m_Size: {x: 0.49, y: 1.34}
   m_Direction: 0
+--- !u!114 &18570996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228250474733490304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbc83a5dda41a046a76e1120e7a50e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 350
+  jump: 7
+  BodyTransform: {fileID: 1228250474733490311}
+  letgo: 1

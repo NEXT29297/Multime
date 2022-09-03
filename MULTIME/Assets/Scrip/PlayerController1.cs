@@ -33,7 +33,7 @@ public class PlayerController1 : MonoBehaviour
         if(horizontalmove != 0f)
         {
            PlayerAnimatorController.SetBool("IsMoving", true);
-           BodyTransform.localScale = new Vector3(2f*horizontalmove, 2f, 1);
+           BodyTransform.localScale = new Vector3(1.5f*horizontalmove, 1.5f, 1);
         }
         else
         {

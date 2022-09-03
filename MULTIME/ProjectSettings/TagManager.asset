@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Detective
   - Ground
+  - IronPlate
+  - Energy
+  - Wire
   layers:
   - Default
   - TransparentFX

@@ -35,6 +35,10 @@ public class MyDialog : MonoBehaviour
                 textComponent.text = sentenses[index];
             }
         }
+        if(playerInRange == false)
+        {
+            dialogBox.SetActive(false);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
