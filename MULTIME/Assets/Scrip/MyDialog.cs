@@ -38,6 +38,7 @@ public class MyDialog : MonoBehaviour
         if(playerInRange == false)
         {
             dialogBox.SetActive(false);
+            index = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

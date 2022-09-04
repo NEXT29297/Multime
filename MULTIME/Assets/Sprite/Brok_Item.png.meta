@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5def7ad2f871f274a96f34274232f533
+guid: a483e696ffc1d50459dfb26363eb2bfe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Control_0
+      name: Brok_Item_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdccf231441f8cf48b72e3070079d315
-      internalID: -499321477
+      spriteID: 60c3944c78a2d7d4e9301ecb0d685af7
+      internalID: -2108157569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Control_1
+      name: Brok_Item_1
       rect:
         serializedVersion: 2
-        x: 341
+        x: 1920
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d306a0bb61ea93245a006990ecef00ee
-      internalID: -1100572192
+      spriteID: 8607e7c4527c528459794f9bd7c52a8a
+      internalID: -829432431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Control_2
+      name: Brok_Item_2
       rect:
         serializedVersion: 2
-        x: 682
+        x: 3840
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521bedc90de2c9d48a5b3de131f29ef3
-      internalID: 573837890
+      spriteID: 77cfb4acf1480344fab20295405f8d76
+      internalID: -1330819669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Control_3
+      name: Brok_Item_3
       rect:
         serializedVersion: 2
-        x: 1023
+        x: 5760
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20df1b15b79c3cd40b61813933796781
-      internalID: -185973622
+      spriteID: c48b4c2a601b5ba43a7a2fb826061a48
+      internalID: -449505505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Control_4
+      name: Brok_Item_4
       rect:
         serializedVersion: 2
-        x: 1364
+        x: 7680
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df89a5f0b01b4f645a5e7f5ba9378273
-      internalID: -2135748263
+      spriteID: dbbcec269e1fb4e44ad4f8bafe6efd6e
+      internalID: 1266752363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Control_5
+      name: Brok_Item_5
       rect:
         serializedVersion: 2
-        x: 1705
+        x: 9600
         y: 0
-        width: 341.33334
-        height: 96
+        width: 1920
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69776751e23bf2a4abb3ec31f93060b5
-      internalID: -1917918627
+      spriteID: 4429cd7156710e8459d3d497d63a28f7
+      internalID: 685633093
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Control_5: -1917918627
-      Control_0: -499321477
-      Control_1: -1100572192
-      Control_2: 573837890
-      Control_3: -185973622
-      Control_4: -2135748263
+      Brok_Item_1: -829432431
+      Brok_Item_0: -2108157569
+      Brok_Item_3: -449505505
+      Brok_Item_4: 1266752363
+      Brok_Item_2: -1330819669
+      Brok_Item_5: 685633093
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

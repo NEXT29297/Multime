@@ -13,7 +13,7 @@ public class PlayerController1 : MonoBehaviour
     bool isjump = false;
     Animator PlayerAnimatorController;
     public Transform BodyTransform;
-
+    public float size;
     public bool letgo = true;
 
     void Start()
@@ -21,11 +21,12 @@ public class PlayerController1 : MonoBehaviour
         collider2d = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         PlayerAnimatorController = GetComponent<Animator>();
+       
         
     }
     void Update()
     {
-
+        
         horizontalmove = Input.GetAxisRaw("Horizontal");           
 
         rb.velocity = new Vector2(horizontalmove*speed*Time.deltaTime, rb.velocity.y);
@@ -33,7 +34,7 @@ public class PlayerController1 : MonoBehaviour
         if(horizontalmove != 0f)
         {
            PlayerAnimatorController.SetBool("IsMoving", true);
-           BodyTransform.localScale = new Vector3(1.5f*horizontalmove, 1.5f, 1);
+           BodyTransform.localScale = new Vector3(size*horizontalmove, size, 1);
         }
         else
         {
