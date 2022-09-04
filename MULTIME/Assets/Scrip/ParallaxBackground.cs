@@ -24,11 +24,11 @@ public class ParallaxBackground : MonoBehaviour
         float disty = (cam.transform.position.y * parallaxEffecty);
 
         transform.position = new Vector3(startpos + dist, startposy - disty, transform.position.z);
-        if (temp > startpos+length)
+        if (temp > startpos+length+1f)
         {
             startpos += length;
         }
-        else if(temp < startpos-length)
+        else if(temp < startpos-length-1f)
         {
             startpos -= length;
         }
