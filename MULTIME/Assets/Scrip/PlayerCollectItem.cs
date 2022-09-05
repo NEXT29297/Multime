@@ -7,6 +7,18 @@ public class PlayerCollectItem : MonoBehaviour
     bool energyBar;
     bool wrie;
     bool ironPlate;
+    public GameObject GameObject;
+
+    void Update()
+    {
+        if (energyBar == true || wrie == true || ironPlate == true )
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+
+            }
+        }    
+    }
 
     private void OnTriggerEnter2D(Collider2D item)
     {

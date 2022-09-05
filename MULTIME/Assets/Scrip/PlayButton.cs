@@ -7,7 +7,7 @@ public class PlayButton : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("World2");
+        SceneManager.LoadScene("World3");
     }
     public void QuitGame()
     {

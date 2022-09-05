@@ -12,13 +12,14 @@ public class MyDialog : MonoBehaviour
     public int index;
     public Text textComponent;
     public float textSpeed;
-
+    public GameObject ebutton;
 
     void Start()
     {
         textComponent.text = string.Empty;
         dialogBox.SetActive(false);
         StartDialog();
+        ebutton.SetActive(false);
     }
     void Update()
     {
@@ -43,6 +44,7 @@ public class MyDialog : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        ebutton.SetActive(true);
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
@@ -50,6 +52,7 @@ public class MyDialog : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        ebutton.SetActive(false);
         playerInRange = false;
     }
     IEnumerator TypeLine()
