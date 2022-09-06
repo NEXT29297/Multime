@@ -23,7 +23,7 @@ public class MoveBackground : MonoBehaviour
     {
         if (transform.position.x < -19)
         {
-            transform.position =new  Vector2(19, 0);
+            transform.position =new  Vector2(18, 0);
         }
     }
 }

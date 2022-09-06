@@ -47,6 +47,11 @@ public class PlayerController1 : MonoBehaviour
             jumping();
             
         }
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed = 1000f;
+        else
+            speed = 350f;
+
  
     }
     void jumping()
@@ -74,4 +79,5 @@ public class PlayerController1 : MonoBehaviour
             letgo = false;
         }
     }
+
 }
