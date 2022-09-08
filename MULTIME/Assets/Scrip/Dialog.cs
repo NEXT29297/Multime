@@ -9,6 +9,7 @@ public class Dialog : MonoBehaviour
     public Text dialogText;
     public string dialog;
     bool playerInRange;
+   
 
 
     void Start()
@@ -21,6 +22,7 @@ public class Dialog : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && playerInRange==true)
         {
             dialogBox.SetActive(true);
+          
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
