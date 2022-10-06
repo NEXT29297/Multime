@@ -10,7 +10,7 @@ public class PlayerController1 : MonoBehaviour
     float horizontalmove = 0f;
     public float speed = 350f;  
     public float jump = 7f;
-    bool isjump = false;
+    public bool isjump = false;
     Animator PlayerAnimatorController;
     public Transform BodyTransform;
     public float size;
@@ -48,9 +48,14 @@ public class PlayerController1 : MonoBehaviour
             
         }
         if (Input.GetKey(KeyCode.LeftShift))
+        {
             speed = 1000f;
+        }
         else
+        {
             speed = 350f;
+        }
+            
 
  
     }
@@ -59,20 +64,11 @@ public class PlayerController1 : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, jump);
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Ground"||collision.collider.tag == "Box")
-        {
-            isjump = false;
-            PlayerAnimatorController.SetBool("isJumping", false);
-        }
-    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-       
             isjump = true;
             PlayerAnimatorController.SetBool("isJumping", true);
-        
     }
     
     public void canMove(bool move)
@@ -82,5 +78,12 @@ public class PlayerController1 : MonoBehaviour
             letgo = false;
         }
     }
-
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground")
+        { 
+            isjump = false;
+            PlayerAnimatorController.SetBool("isJumping", false);
+        }
+    }
 }

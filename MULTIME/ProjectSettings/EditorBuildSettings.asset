@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World3.unity
     guid: f43304e1d8c8a4c469c06c86bece3afd
+  - enabled: 1
+    path: Assets/Scenes/World3 Day 3.unity
+    guid: 19a910a687a53834fb99f9f8de8c6144
   m_configObjects: {}

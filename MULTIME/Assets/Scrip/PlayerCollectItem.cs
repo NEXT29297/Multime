@@ -5,27 +5,35 @@ using UnityEngine.UI;
 
 public class PlayerCollectItem : MonoBehaviour
 {
-    private int energyBarcount, wriecount, ironPlatecount;
-    [SerializeField] public Text energyCountText;
+    GetInSpaceship getInSpaceship;
+    public GameObject spaceship;
+
+    public int itemCount;
+    [SerializeField] public Text itemCountText;
     public GameObject textbox;
+
+    private void Awake()
+    {
+        getInSpaceship =spaceship.GetComponent<GetInSpaceship>();
+    }
     void Start()
     {
-        energyCountText.text = "0/3";
+        itemCountText.text = "0/3";
         textbox.SetActive(false);
     }
     void Update()
-    {   
-        
+    {
+        getInSpaceship.item = itemCount;
     }
 
     private void OnTriggerEnter2D(Collider2D item)
     {   
-        if (item.CompareTag("Energy"))
+        if (item.CompareTag("Item"))
         {   
             Destroy(item.gameObject);
             textbox.SetActive(true);
-            energyBarcount++;
-            energyCountText.text = energyBarcount + "/3";
+            itemCount++;
+            itemCountText.text = itemCount + "/3";
         }
     }
 

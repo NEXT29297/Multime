@@ -11,6 +11,7 @@ TagManager:
   - Wire
   - Box
   - BoxCheck
+  - Item
   layers:
   - Default
   - TransparentFX
