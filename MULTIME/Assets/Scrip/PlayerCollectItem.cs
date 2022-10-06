@@ -1,44 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollectItem : MonoBehaviour
 {
-    bool energyBar;
-    bool wrie;
-    bool ironPlate;
-    public GameObject GameObject;
-
-    void Update()
+    private int energyBarcount, wriecount, ironPlatecount;
+    [SerializeField] public Text energyCountText;
+    public GameObject textbox;
+    void Start()
     {
-        if (energyBar == true || wrie == true || ironPlate == true )
-        {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-
-            }
-        }    
+        energyCountText.text = "0/3";
+        textbox.SetActive(false);
+    }
+    void Update()
+    {   
+        
     }
 
     private void OnTriggerEnter2D(Collider2D item)
-    {
+    {   
         if (item.CompareTag("Energy"))
-        {
-            energyBar = true;
-        }
-        if (item.CompareTag("Wrie"))
-        {
-            wrie = true;
-        }
-        if (item.CompareTag("IronPlate"))
-        {
-            ironPlate = true;
+        {   
+            Destroy(item.gameObject);
+            textbox.SetActive(true);
+            energyBarcount++;
+            energyCountText.text = energyBarcount + "/3";
         }
     }
-    private void OnTriggerExit2D(Collider2D item)
-    {
-        energyBar = false;
-        wrie = false;
-        ironPlate = false;
-    }
+
 }

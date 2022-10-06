@@ -20,9 +20,11 @@ public class MyDialog : MonoBehaviour
         dialogBox.SetActive(false);
         StartDialog();
         ebutton.SetActive(false);
+        
     }
     void Update()
-    {
+    {   
+
         if(Input.GetKeyDown(KeyCode.E) && playerInRange ==true)
         {
             if (textComponent.text == sentenses[index])

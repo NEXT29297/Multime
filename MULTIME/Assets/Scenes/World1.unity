@@ -1220,6 +1220,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 349608451595885181, guid: 6a0401eae2eba02439652f78147c75da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5622183344158433949, guid: 6a0401eae2eba02439652f78147c75da, type: 3}
       propertyPath: Player
       value: 

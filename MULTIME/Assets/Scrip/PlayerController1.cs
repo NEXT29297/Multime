@@ -61,7 +61,7 @@ public class PlayerController1 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground"||collision.collider.tag == "Box")
         {
             isjump = false;
             PlayerAnimatorController.SetBool("isJumping", false);
@@ -69,7 +69,10 @@ public class PlayerController1 : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isjump = true;   
+       
+            isjump = true;
+            PlayerAnimatorController.SetBool("isJumping", true);
+        
     }
     
     public void canMove(bool move)
