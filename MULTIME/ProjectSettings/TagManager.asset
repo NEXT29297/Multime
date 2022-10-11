@@ -12,6 +12,7 @@ TagManager:
   - Box
   - BoxCheck
   - Item
+  - HaveDialog
   layers:
   - Default
   - TransparentFX

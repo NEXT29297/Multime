@@ -14,21 +14,29 @@ public class MyDialog : MonoBehaviour
     public float textSpeed;
     public GameObject ebutton;
 
+    PlayerController1 playerController1;
+    public GameObject player;
+
+    private void Awake()
+    {
+        playerController1 = player.GetComponent<PlayerController1>();
+    }
+
     void Start()
     {
-        textComponent.text = string.Empty;
+        //textComponent.text = string.Empty;
         dialogBox.SetActive(false);
         StartDialog();
         ebutton.SetActive(false);
         
     }
     void Update()
-    {   
-
-        if(Input.GetKeyDown(KeyCode.E) && playerInRange ==true)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange ==true)
         {
+            playerController1.dialogIsPlaying = true;
             if (textComponent.text == sentenses[index])
-            {
+            {                
                 dialogBox.SetActive(true);
                 NextLine();
             }
@@ -38,20 +46,30 @@ public class MyDialog : MonoBehaviour
                 textComponent.text = sentenses[index];
             }
         }
-        if(playerInRange == false)
+        if(playerController1.onItemHaveDialog == false)
         {
             dialogBox.SetActive(false);
             index = 0;
+            playerController1.dialogIsPlaying = false;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ebutton.SetActive(true);
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            ebutton.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         ebutton.SetActive(false);
@@ -77,12 +95,13 @@ public class MyDialog : MonoBehaviour
         {
             dialogBox.SetActive(false);
             index = 0;
+            textComponent.text = sentenses[0];
+            playerController1.dialogIsPlaying = false;           
         }
     }
     void StartDialog()
     {
         index = 0;
         StartCoroutine(TypeLine());
-    }
-
+    }    
 }
